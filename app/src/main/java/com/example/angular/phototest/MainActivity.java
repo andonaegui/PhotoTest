@@ -49,7 +49,6 @@ public class MainActivity extends Activity {
         File image_file = new File(folder, "cam_image.jpg");
         return image_file;
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         String path = "sdcard/camera_app/cam_image.jpg";
