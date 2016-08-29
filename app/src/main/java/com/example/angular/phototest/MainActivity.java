@@ -16,6 +16,7 @@ import java.io.File;
 public class MainActivity extends Activity {
     Button button;
     ImageView imageView;
+    static final int CAM_REQUEST = 1;
 
 
     @Override
@@ -25,8 +26,6 @@ public class MainActivity extends Activity {
         button = (Button) findViewById(R.id.button);
         imageView = (ImageView)findViewById(R.id.image_view);
         button.setOnClickListener(new View.OnClickListener(){
-            static final int CAM_REQUEST = 1;
-
             @Override
             public void onClick(View v){
                 Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -40,7 +39,7 @@ public class MainActivity extends Activity {
 
     private File getFile ()
     {
-        File folder = new File ("scard/camera_app");
+        File folder = new File ("sdcard/camera_app");
 
         if (!folder.exists())
         {
